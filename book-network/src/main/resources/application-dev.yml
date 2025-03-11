@@ -1,0 +1,45 @@
+spring:
+  datasource:
+      url: jdbc:postgresql://localhost:5432/book_social_network
+      username: postgres
+      password: Ra#A1381
+      driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false  # Disable open-in-view to prevent warning
+
+  mail:
+    host: localhost
+    port: 1025
+    username: nimash.22@cse.mrt.ac.lk
+    password: Ra#1381
+    properties:
+      mail:
+        smtp:
+          trust: "*"
+        auth: true
+        starttls:
+          enable: true
+        connectiontimout: 5000
+        timeout: 3000
+        writetimeout: 5000
+
+application:
+  security:
+    jwt:
+      secret-Key: e3f5c52ab41b475bb6052f9554d5b8e92efe48b1b634f180fc90546be88490b98780b403ae043a49967bf89705373c9e51a7db6c1311935ce976254f76494b10
+      expiration: 86400000
+  mailing:
+    frontend:
+      activation-url: http://localhost:4200/activate-account
+
+logging:
+  level:
+    org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer: ERROR

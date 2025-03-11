@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 50MB
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    check-template-location: true
+    enabled: true
+
+springdoc:
+  default-produces-media-type: application/json
+server:
+  servlet:
+    context-path: /api/v1/
+spring.devtools.restart.enabled: true
+spring.devtools.livereload.enabled: true
+  
+  spring.thymeleaf.prefix=classpath:/templates/
+  spring.thymeleaf.suffix=.html
+  spring.thymeleaf.check-template-location=true
+  spring.thymeleaf.enabled=true
