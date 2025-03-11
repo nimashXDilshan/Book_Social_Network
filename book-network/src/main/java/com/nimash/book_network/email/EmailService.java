@@ -45,6 +45,9 @@ public class EmailService {
         else{
             templateName= emailTemplate.name();
         }
+
+        System.out.println(templateName);
+
         MimeMessage mimeMessage = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(
                 mimeMessage,
